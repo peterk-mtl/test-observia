@@ -1,0 +1,53 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Api Documentation",
+        "description": "Implementation of Swagger with in Laravel",
+        "contact": {
+            "email": "kennedy.peter32@gmail.com"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/pokemons": {
+            "get": {
+                "tags": [
+                    "Tests"
+                ],
+                "summary": "Get List Of Pokemons",
+                "description": "Returns pokemons with pagination",
+                "operationId": "getPaginatadPokemons",
+                "parameters": [
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        }
+    },
+    "security": [
+        []
+    ]
+}
